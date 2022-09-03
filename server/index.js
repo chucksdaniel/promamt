@@ -13,8 +13,16 @@ connectDB();
 
 app.use(cors());
 
+// app.use(
+// 	"/graphql",
+// 	graphqlHTTP({
+// 		schema,
+// 		graphiql: process.env.NODE_ENV === "development",
+// 	})
+// );
+
 app.use(
-	"/graphql",
+	"/v1/graphql",
 	graphqlHTTP({
 		schema,
 		graphiql: process.env.NODE_ENV === "development",
