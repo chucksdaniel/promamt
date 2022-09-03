@@ -13,6 +13,8 @@ connectDB();
 
 app.use(cors());
 
+const PORT = process.env.PORT;
+
 // app.use(
 // 	"/graphql",
 // 	graphqlHTTP({
@@ -29,7 +31,9 @@ app.use(
 	})
 );
 
-const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+	res.send("Welcome to Promamt!");
+});
 
 app.listen(PORT, () => {
 	console.log(`Server listening/running on port ${PORT}`);
