@@ -1,0 +1,54 @@
+// Query for accessing the data GraphQL
+{
+  project {
+    name
+    client {
+      name
+    }
+  }
+}
+
+mutation{
+  updateProject(id: "630cf8c1090beddb18bfeea0", name: "Dating App", status: progress){
+    name,
+    status
+  }
+}
+
+mutation{
+  addProject(name: "eCom App", description: "A web application for online sales", status: new, clientId: "630c9bb646e53521e532721c") {
+    id,
+    name,
+    description
+  }
+}
+
+
+mutation {
+  deleteClient(id: "630cf20d031f5a2db8fd6cff"){
+    name
+  }
+}
+
+
+mutation {
+	addClient(
+		name: "Chucks Daniel"
+		email: "chucksdaniel@gmail.com"
+		phone: "555-5555-5555"
+	) {
+		id
+		name
+		email
+		phone
+	}
+}
+
+mutation deleteClient($id: String!) {
+   deleteClient(id: $id) {
+      id
+      name
+      email
+      phone
+   }
+}
