@@ -1,6 +1,6 @@
 # PROMAMT
 
-PROMGMT is a project management web application that helps you keep track of all the project you are currently working on with the owners (client) informations.
+PROMAMT is a project management web application that helps you keep track of all the project you are currently working on with the owners (client) informations.
 
 To start the app on your local machine, make sure the following tools are installed on your machine
 
