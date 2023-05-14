@@ -52,3 +52,22 @@ mutation deleteClient($id: String!) {
       phone
    }
 }
+
+# mutation AddClient ($name: String!, $email: String!, $phone: String!) {
+# 	addClient(name: $name, email: $email, phone: $phone) {
+# 		name,
+#     email,
+#     phone
+#   }
+# }
+
+mutation AddProject ($name: String!, $desc: String!, $status: ProjectStatus!, $clientId: ID!) {
+	addProject(name: $name, description: $desc, status: $status, clientId: $clientId) {
+		name,
+    description,
+    client{
+      name,
+      phone
+    }
+  }
+}
