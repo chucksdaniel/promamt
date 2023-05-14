@@ -29,7 +29,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-	uri: "promamt-production.up.railway.app/v1/graphql",
+	uri: "https://promamt-production.up.railway.app/v1/graphql",
 	// uri: "http://localhost:8081/v1/graphql",
 	cache,
 });
